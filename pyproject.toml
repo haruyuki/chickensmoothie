@@ -1,13 +1,29 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "chickensmoothie"
 version = "0.1.0"
-description = "Async Chicken Smoothie archive and opening-status client"
+description = "Unofficial async Python client for Chicken Smoothie"
+readme = "README.md"
+license = "ISC"
+license-files = ["LICENSE"]
+authors = [{ name = "Haru" }]
+keywords = ["chickensmoothie", "pets", "archive", "asyncio"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
 requires-python = ">=3.11"
 dependencies = ["aiohttp>=3.13.5", "lxml>=6.0.4", "cssselect>=1.4.0"]
+
+[project.urls]
+Repository = "https://github.com/haruyuki/chickensmoothie"
+Issues = "https://github.com/haruyuki/chickensmoothie/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

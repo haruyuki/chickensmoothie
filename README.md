@@ -1,10 +1,21 @@
 # chickensmoothie
 
-Standalone asynchronous client for Chicken Smoothie. Requires Python 3.11+.
+Unofficial standalone asynchronous client for Chicken Smoothie. Requires Python 3.11+.
+Not affiliated with or endorsed by Chicken Smoothie.
 No Discord, database, environment variables, or bot startup dependencies.
 
-Install from this repository with `pip install ./packages/chickensmoothie`.
-For bot development, run `uv sync` at the repository root.
+## Installation
+
+From a local checkout:
+
+```powershell
+uv sync
+```
+
+Or install with pip: `python -m pip install .`.
+After the first PyPI release, users can install with `python -m pip install chickensmoothie`.
+
+## Usage
 
 ```python
 import asyncio
@@ -48,5 +59,13 @@ The bot owns SQLite/MongoDB storage, RSS feed caching, reminder scheduling,
 Discord formatting and image uploads. `NEWS_FEED_URL` exposes the news source
 for other applications to use with their preferred RSS reader.
 
-Run offline regression tests from the repository root after installation:
-`python -m unittest discover -s tests`.
+## Development
+
+Run offline regression tests: `uv run python -m unittest discover -s tests -v`.
+Build release files: `uv build --no-sources`.
+See [RELEASING.md](RELEASING.md) for validation and PyPI upload instructions.
+
+## License
+
+ISC. See [LICENSE](LICENSE). This license applies to the package code, not to
+Chicken Smoothie's images, content, or branding.
